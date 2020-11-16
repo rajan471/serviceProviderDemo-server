@@ -1,8 +1,6 @@
-const fs = require("fs");
-const path = require("path");
 let apiHits = 0;
 
-let mockData = fs.readFileSync(path.join(__dirname, "../mocks/providers.json"), 'utf-8');
+let mockData = require("../mocks/providers");
 
 
 const getProviders = (req, res, next) => {
