@@ -11,6 +11,7 @@ app.use(urlEncoder);
 app.use(jsonEncoder);
 app.use(helmet());
 app.use(cors());
+app.options('*', cors())
 
 app.use('/assets', express.static('public'))
 require("./routes")(app);
